@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("button").click(function() {
+                    $.get("/controller/" + $(this).attr('id'), function(data, status){});
+                });
+            });
+        </script>
+        <meta charset="UTF-8">
+        <title>IoT 기말고사</title>
+    </head>
+    <body>
+        <div class="container">
+            <h4>20172295 강유진 / 20152501 윤재승</h4>
+            <hr/>
+            <button type="button" class="btn btn-primary" id='T'>불 켜기</button>
+            <button type="button" class="btn btn-danger" id='F'>불 끄기</button>
+        </div>
+    </body>
+</html>
